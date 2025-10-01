@@ -3,7 +3,7 @@ function getAgeCategory(int $age) : string {
     return match (true) {
         $age <= 12 => 'Ребенок',
         $age > 12 && $age <= 17 => 'Подросток',
-        $age > 18 && $age <= 64 => 'Взрослый',
+        $age >= 18 && $age <= 64 => 'Взрослый',
         $age >= 65 => 'Пожилой',
 
     };

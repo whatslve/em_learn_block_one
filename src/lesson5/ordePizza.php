@@ -7,7 +7,7 @@ function orderPizza($size = 'medium', $crust = 'thin', $toppings = ['cheese']) {
 
         else $toppingsList .= ', ' . $topping;
     }
-    return 'Заказ: ' . $size . ' пицца на тонком тесте с ' . $toppingsList;
+    return 'Заказ: ' . $size . ' пицца на ' . $crust . ' тесте с ' . $toppingsList;
 }
 
 echo orderPizza();

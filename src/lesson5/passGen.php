@@ -1,6 +1,7 @@
 <?php
 
-function generatePassword($len = 8, $incNums = true, $incSpecChars = false) {
+function generatePassword($len = 8, $incNums = true, $incSpecChars = false): string
+{
     $salt = time() * rand(1000, 9999);
     $result = hash('sha256', $salt);
     $result = substr($result, 0, $len);
