@@ -2,7 +2,7 @@
 
 function generatePassword($len = 8, $incNums = true, $incSpecChars = false) {
     $salt = time() * rand(1000, 9999);
-    $result = md5($salt);
+    $result = hash('sha256', $salt);
     $result = substr($result, 0, $len);
 
     if ($incNums) {
